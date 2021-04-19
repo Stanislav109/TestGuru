@@ -5,11 +5,17 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+User.destroy_all
+Category.destroy_all
+Test.destroy_all
+Result.destroy_all
+Question.destroy_all
+Answer.destroy_all
 
 users = User.create!([
-  { name: 'Stas', login: 'stas01', password: '123' },
-  { name: 'Igor', login: 'igor01', password: '1234' },
-  { name: 'Max', login: 'max01', password: '12345' }
+  { name: 'Stas', login: 'stas01', password: '123', email: 'stas@mail.ru'},
+  { name: 'Igor', login: 'igor01', password: '1234', email: 'igor@mail.ru' },
+  { name: 'Max', login: 'max01', password: '12345', email: 'max@mail.ru' }
 ])
 
 categories = Category.create!([
@@ -21,20 +27,23 @@ categories = Category.create!([
 tests = Test.create!([
   { title: 'Планеты солнечной системы', level: 0, category: categories[0], author: users[0] },
   { title: 'Футбол', level: 1, category: categories[1], author: users[0] },
-  { title: 'Сложение чисел', level: 0, category: categories[2], author: users[0] }
+  { title: 'Сложение чисел', level: 0, category: categories[2], author: users[0] },
+  { title: 'Футбол', level: 3, category: categories[1], author: users[0] }
 ])
 
 results = Result.create!([
   { status: true, user: users[0], test: tests[0] },
   { status: true, user: users[1], test: tests[1] },
-  { status: true, user: users[1], test: tests[2] }
+  { status: true, user: users[1], test: tests[2] },
+  { status: true, user: users[1], test: tests[3] }
 ])
 
 questions = Question.create!([
   { body: 'Какая первая планета от Солнца?', test: tests[0] },
   { body: 'Сколько будет 2+2?', test: tests[2] },
   { body: 'Сколько будет 3+3?', test: tests[2] },
-  { body: 'Сколько человек играет в футбольной команде?', test: tests[1] }
+  { body: 'Сколько человек играет в футбольной команде?', test: tests[1] },
+  { body: 'Можно ли брать мяч в руки полевому игроку?', test: tests[1] }
 ])
 
 answers = Answer.create!([
@@ -49,5 +58,8 @@ answers = Answer.create!([
   { body: '8', question: questions[2] },
   { body: '10', question: questions[3] },
   { body: '11', question: questions[3], correct: true },
-  { body: '12', question: questions[3] }
+  { body: '12', question: questions[3] },
+  { body: 'Можно', question: questions[4] },
+  { body: 'Можно, только при вводе мяча из аута', question: questions[4], correct: true },
+  { body: 'Нельзя', question: questions[4] }
 ])
