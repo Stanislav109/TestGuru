@@ -1,6 +1,6 @@
 class QuestionsController < ApplicationController
-  before_action :select_test, only: %i[index create new]
-  before_action :select_question, only: %i[show destroy]
+  before_action :find_test, only: %i[index create new]
+  before_action :find_question, only: %i[show destroy]
 
   rescue_from ActiveRecord::RecordNotFound, with: :rescue_with_question_not_found
 
@@ -13,12 +13,15 @@ class QuestionsController < ApplicationController
     render inline: 'Question:    <%=  @question.body %>'
   end
 
-  def new
-  end
+  def new; end
 
   def create
-    @question = @test.questions.create!(question_params)
-    render plain: @question.inspect
+    @question = @test.questions.build(question_params)
+    if @question.save
+      redirect_to root_path
+    else
+      render :new
+    end   
   end
 
   def destroy
@@ -28,11 +31,11 @@ class QuestionsController < ApplicationController
 
   private
 
-  def select_question
+  def find_question
     @question = Question.find(params[:id])
   end
 
-  def select_test
+  def find_test
     @test = Test.find(params[:test_id])
   end
 
