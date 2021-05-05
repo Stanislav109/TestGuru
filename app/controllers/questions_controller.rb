@@ -10,23 +10,39 @@ class QuestionsController < ApplicationController
   end
 
   def show
-    render inline: 'Question:    <%=  @question.body %>'
+    @question = Question.find(params[:id])    
   end
 
-  def new; end
+  def new
+    @question = @test.questions.new
+  end
+
+  def edit
+    @question = Question.find(params[:id])
+  end
 
   def create
     @question = @test.questions.build(question_params)
     if @question.save
-      redirect_to root_path
+      redirect_to test_questions_path
     else
       render :new
     end   
   end
 
+  def update
+    @question = Question.find(params[:id])
+    if @question.update(question_params)
+      redirect_to question_path
+    else
+      render :edit
+    end
+  end
+
   def destroy
+    @question = Question.find(params[:id])
     @question.destroy
-    redirect_to root_path
+    redirect_to @question.test
   end
 
   private
