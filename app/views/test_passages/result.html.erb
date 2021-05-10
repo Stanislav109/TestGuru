@@ -1,0 +1,15 @@
+<h1><%= @test_passage.test.title %> тест завершен!</h1>
+
+<% if @test_passage.passed? %>
+  <div class="correct">
+    <h2> Ура! Вы прошли тест! </h2>
+    <h2> <%= @test_passage.passed_by_percents %> % </h2>
+  </div>
+<% else %>
+  <div class="wrong">
+    <h2> Тест не пройден </h2>
+    <h2> <%= @test_passage.passed_by_percents %> % </h2>
+  </div>
+<% end %>
+
+<p><%= link_to 'To test list', root_path %></p>
