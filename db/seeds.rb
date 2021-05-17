@@ -8,14 +8,13 @@
 User.destroy_all
 Category.destroy_all
 Test.destroy_all
-Result.destroy_all
 Question.destroy_all
 Answer.destroy_all
 
 users = User.create!([
-  { name: 'Stas', login: 'stas01', password: '123', email: 'stas@mail.ru'},
-  { name: 'Igor', login: 'igor01', password: '1234', email: 'igor@mail.ru' },
-  { name: 'Max', login: 'max01', password: '12345', email: 'max@mail.ru' }
+  { name: 'Stas', email: 'stas@mail.ru', password: '123'},
+  { name: 'Igor', email: 'igor@mail.ru', password: '1234' },
+  { name: 'Max', email: 'max@mail.ru', password: '12345' }
 ])
 
 categories = Category.create!([
@@ -29,13 +28,6 @@ tests = Test.create!([
   { title: 'Футбол', level: 1, category: categories[1], author: users[0] },
   { title: 'Сложение чисел', level: 0, category: categories[2], author: users[0] },
   { title: 'Футбол', level: 3, category: categories[1], author: users[0] }
-])
-
-results = Result.create!([
-  { status: true, user: users[0], test: tests[0] },
-  { status: true, user: users[1], test: tests[1] },
-  { status: true, user: users[1], test: tests[2] },
-  { status: true, user: users[1], test: tests[3] }
 ])
 
 questions = Question.create!([
