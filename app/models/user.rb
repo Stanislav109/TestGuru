@@ -4,7 +4,7 @@ class User < ApplicationRecord
   has_many :author, class_name: 'Test', foreign_key: 'author_id', dependent: :destroy
 
   validates :email, presence: true,
-                    format: /\A[\w+\-.]+@[a-z\d\-]+(\.[a-z\d\-]+)*\.[a-z]+\z/i,
+                    format: { with: URI::MailTo::EMAIL_REGEXP, message: '- неверный формат' },
                     uniqueness: true
   validates :name, :email, presence: true
 

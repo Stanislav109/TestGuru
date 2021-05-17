@@ -1,5 +1,5 @@
 <%= form_with url: sessions_path, local: true do |form| %>
-  <%= show_flash_alerts %>
+  <%= show_flash_alerts(:alert) %>
 
   <p>
     <%= form.label :email %><br>
