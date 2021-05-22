@@ -13,6 +13,8 @@
   <%= @test.category.title %>
 </p>
 
-<%= render partial: 'questions/question', collection: @test.questions %>
-<%= link_to 'Edit', edit_admin_test_path(@test) %>
+<ol>
+  <%= render @test.questions %>
+</ol>
+<%= link_to 'Edit', edit_admin_test_path(@test) %> |
 <%= link_to 'Back', admin_tests_path %>
