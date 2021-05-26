@@ -1,5 +1,80 @@
 ru:
-  devise:
-    sessions:
-      signed_in: "Вы успешно авторизованы"
-      signed_out: "Вы вышли из TestGuru"
+  helpers:
+    submit:
+      test:
+        create: "Создать тест"
+        update: "Обновить тест"
+    label:
+      test:
+        title: "Название"
+        level: "Уровень"
+        category_id: "Категория"
+
+  tests:
+    index:
+      header: "Доступные тесты"
+      start: "Старт"
+      table:
+          title: "Название"
+          level: "Уровень Сложности"
+          category: "Категория"
+          question_count: "Кол-во вопросов"
+          actions: "Возможные действия"
+
+  test_passages:
+    result:
+      header: "Тест %{title} успешно завершен!"
+
+  shared:
+    header:
+      logout: "Выйти"
+    errors:
+      header:
+        few: "Обнаружено %{count} ошибки"
+        many: "Обнаружено %{count} ошибок"
+        one: "Обнаружена %{count} ошибка"
+        other: "Обнаружено %{count} ошибки"
+
+  test_mailer:
+    completed_test:
+      subject: "Вы успешно завершили тест на TestGuru!"
+
+  confirm:
+    message: "Вы уверены?"
+
+  admin:
+    nav:
+      header: "Панель администратора"
+      logout: "Выйти"
+    tests:
+      create:
+        success: "Тест был успешно создан!"
+      update:
+        success: "Тест был успешно обновлен!"
+      index:
+        header: "Доступные тесты"
+        create_link: "Создать новый тест"
+        table:
+          title: "Название"
+          level: "Уровень Сложности"
+          category: "Категория"
+          question_count: "Кол-во вопросов"
+          actions: "Возможные действия"
+      test:
+        actions:
+          show: "Просмотреть"
+          edit: "Изменить"
+          delete: "Удалить"
+      new:
+        header: "Создание нового теста"
+        back_link: "Назад"
+      edit:
+        header: "Редактирование теста %{test}"
+        back_link: "Назад"
+      show:
+        title: "Название"
+        level: "Уровень Сложности"
+        category: "Категория"
+        back_link: "Назад"
+        edit_link: "Редактировать"
+        new_question_link: "Создать новый вопрос"

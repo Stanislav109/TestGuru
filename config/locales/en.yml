@@ -1,5 +1,77 @@
 en:
-  devise:
-    sessions:
-      signed_in: "You are in TestGuru"
-      signed_out: "You leaved TestGuru"
+  helpers:
+    submit:
+      test:
+        create: "Create test"
+        update: "Update test"
+    label:
+      test:
+        title: "Title"
+        level: "Level"
+        category_id: "Category"
+
+  tests:
+    index:
+      header: "Tricky Tests"
+      start: "Start"
+      table:
+          title: "Title"
+          level: "Level"
+          category: "Category"
+          question_count: "Questions count"
+          actions: "Actions"
+
+  test_passages:
+    result:
+      header: "Test %{title} was successfully complited!"
+
+  shared:
+    header:
+      logout: "Logout"
+    errors:
+      header:
+        one: "%{count} error detected"
+        other: "%{count} errors detected"
+        
+  test_mailer:
+    completed_test:
+      subject: "You successfully completed the TestGuru Test!"
+
+  confirm:
+    message: "Are you sure ?"
+
+  admin:
+    nav:
+      header: "Admin panel"
+      logout: "Logout"
+    tests:
+      create:
+        success: "Test was successfully created!"
+      update:
+        success: "Test was successfully updated!"
+      index:
+        header: "Tricky Tests"
+        create_link: "Create new test"
+        table:
+          title: "Title"
+          level: "Level"
+          question_count: "Questions count"
+          actions: "Actions"
+      test:
+        actions:
+          show: "Show"
+          edit: "Edit"
+          delete: "Delete"
+      new:
+        header: "New test creating"
+        back_link: "Back"
+      edit:
+        header: "Editing %{test}"
+        back_link: "Back"
+      show:
+        title: "Title"
+        level: "Level"
+        category: "Category"
+        back_link: "Back"
+        edit_link: "Edit"
+        new_question_link: "Create new question"
