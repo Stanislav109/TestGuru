@@ -26,6 +26,11 @@ ru:
       header: "Тест %{title} успешно завершен!"
 
   shared:
+    nav: 
+      logout: "Выйти"
+      login: "Войти"
+      signin: "Регистрация"
+      adminpanel: "Панель администратора"
     header:
       logout: "Выйти"
     errors:
@@ -46,6 +51,7 @@ ru:
     nav:
       header: "Панель администратора"
       logout: "Выйти"
+      adminpanel: "Панель администратора"
     tests:
       create:
         success: "Тест был успешно создан!"
