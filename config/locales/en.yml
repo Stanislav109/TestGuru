@@ -26,6 +26,10 @@ en:
       header: "Test %{title} was successfully complited!"
 
   shared:
+    nav: 
+      logout: "Log out"
+      login: "Log in"
+      signin: "Sign in"
     header:
       logout: "Logout"
     errors:
@@ -44,6 +48,7 @@ en:
     nav:
       header: "Admin panel"
       logout: "Logout"
+      adminpanel: "Admin Panel"
     tests:
       create:
         success: "Test was successfully created!"
