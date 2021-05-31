@@ -30,6 +30,14 @@ gem 'bootsnap', '>= 1.4.4', require: false
 
 gem 'devise', '~> 4.0'
 
+# NETWORKING
+
+gem 'faraday'
+
+# API
+gem "octokit", "~> 4.0"
+gem 'dotenv-rails', groups: [:development, :test]
+
 # LOCALIZATION
 gem 'rails-i18n'
 

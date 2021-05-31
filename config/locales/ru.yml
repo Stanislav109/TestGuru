@@ -24,6 +24,9 @@ ru:
   test_passages:
     result:
       header: "Тест %{title} успешно завершен!"
+    gist:
+      success: "Gist успешно сохранен!"
+      failure: "Во время сохранения gist произошла ошибка"
 
   shared:
     nav: 
@@ -47,7 +50,18 @@ ru:
   confirm:
     message: "Вы уверены?"
 
+  services:
+    git_question_service:
+      description: "Вопрос: %{title} в приложении TestGuru"
+
   admin:
+    gists:
+      index:
+        header: "Список всех Gist пользователей"
+        table:
+          question: "Вопрос"
+          gist_url: "ссылка Gist"
+          email: "Почта"
     nav:
       header: "Панель администратора"
       logout: "Выйти"

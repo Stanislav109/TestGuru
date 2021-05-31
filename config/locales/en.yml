@@ -24,6 +24,9 @@ en:
   test_passages:
     result:
       header: "Test %{title} was successfully complited!"
+    gist:
+      success: "Gist successfully saved!"
+      failure: "Error in gist saving"
 
   shared:
     nav: 
@@ -44,7 +47,18 @@ en:
   confirm:
     message: "Are you sure ?"
 
+  services:
+    git_question_service:
+      description: "Question: %{title} in TestGuru application"
+
   admin:
+    gists:
+      index:
+        header: "All Gists"
+        table:
+          question: "Question"
+          gist_url: "Gist link"
+          email: "Email"
     nav:
       header: "Admin panel"
       logout: "Logout"
