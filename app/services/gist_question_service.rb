@@ -1,28 +1,15 @@
 class GistQuestionService
+  ResultObject = Struct.new(:success?, :html_url)
 
-  class ResultOfConnection
-
-    attr_reader :gist_url
-
-    def initialize(connection)
-      @gist_url = connection[:html_url]
-    end
-
-    def success?
-      @gist_url.present?
-    end
-  end
-
-  attr_reader :result 
-
-  def initialize(question, client: default_client)
+  def initialize(question, client: http_client)
     @question = question
     @test = @question.test
-    @client = client || Octokit::Client.new(access_token: ENV['GITHUB_ACCESS_TOKEN'])
+    @client = client
   end
 
   def call
-    @result = ResultOfConnection.new(@client.create_gist(gist_params))
+    response = @client.create_gist(gist_params)
+    ResultObject.new(response.html_url.present?, response.html_url)
   end
 
   private
@@ -43,7 +30,7 @@ class GistQuestionService
     [@question.body, *@question.answers.pluck(:body)].join("\n")
   end
 
-  def default_client
-    Octokit::Client.new(access_token: ENV['GITHUB_ACCESS_TOKEN'])
+  def http_client
+    Octokit::Client.new(access_token: ENV.fetch('GITHUB_ACCESS_TOKEN'))
   end
 end
