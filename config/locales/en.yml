@@ -81,6 +81,8 @@ en:
           show: "Show"
           edit: "Edit"
           delete: "Delete"
+      form_inline:
+        submit: "OK"
       new:
         header: "New test creating"
         back_link: "Back"
