@@ -10,7 +10,9 @@
   <td align="align-middle">
     <%= link_to t('.actions.edit'), 
                 edit_admin_test_path(test),
-                data: { test_id: test.id },
+                data: { test_id: test.id,
+                        text_cancel: t('.actions.cancel'),
+                        text_edit: t('.actions.edit') },
                 class: "form-inline-link" %>
   </td>
   <td align="align-middle">

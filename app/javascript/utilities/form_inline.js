@@ -1,11 +1,17 @@
 document.addEventListener('turbolinks:load', function() {
-  $('.form-inline-link').on('click', formInlineLinkHandler)
+  const controls = document.querySelectorAll('.form-inline-link')
 
+  if (controls.length) {
+    for(var i = 0; i < controls.length; i++) {
+      controls[i].addEventListener('click', formInlineLinkHandler)
+    }
+  }
+  
   const errors = document.querySelector('.resource-errors')
 
   if (errors) {
-  	const resourceId = errors.dataset.resourceId
-  	formInlineHandler(resourceId)
+    const resourceId = errors.dataset.resourceId
+    formInlineHandler(resourceId)
   }
 })
 
@@ -27,8 +33,8 @@ function formInlineHandler(testId) {
   $testTitle.toggle()
 
   if ($formInline.is(':visible')) {
-    link.textContent = 'Отмена'
+    link.textContent = link.dataset.textCancel
   } else {
-  	link.textContent = 'Изменить'
+  	link.textContent = link.dataset.textEdit
   }
 }
