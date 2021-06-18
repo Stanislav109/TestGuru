@@ -85,6 +85,9 @@ ru:
           show: "Просмотреть"
           edit: "Изменить"
           delete: "Удалить"
+          cancel: "Отмена"
+      form_inline:
+        submit: "OK"
       new:
         header: "Создание нового теста"
         back_link: "Назад"
