@@ -5,16 +5,15 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
-User.destroy_all
-Category.destroy_all
-Test.destroy_all
-Question.destroy_all
-Answer.destroy_all
+# User.destroy_all
+# Category.destroy_all
+# Test.destroy_all
+# Question.destroy_all
+# Answer.destroy_all
 
 users = User.create!([
-  { name: 'Stas', email: 'stas@mail.ru', password: '123'},
-  { name: 'Igor', email: 'igor@mail.ru', password: '1234' },
-  { name: 'Max', email: 'max@mail.ru', password: '12345' }
+  { first_name: 'Maxim', last_name: 'Maximov', email: 'maxim@mail.ru', password: '123456'},
+  { first_name: 'Fedor', last_name: 'Fedorov', email: 'fedor@mail.ru', password: '123456' }
 ])
 
 categories = Category.create!([
@@ -38,7 +37,7 @@ questions = Question.create!([
   { body: 'Можно ли брать мяч в руки полевому игроку?', test: tests[1] }
 ])
 
-answers = Answer.create!([
+Answer.create!([
   { body: 'Земля', question: questions[0] },
   { body: 'Меркурий', question: questions[0], correct: true },
   { body: 'Марс', question: questions[0] },
