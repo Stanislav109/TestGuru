@@ -82,7 +82,7 @@ ru:
           actions: "Возможные действия"
       test:
         actions:
-          show: "Просмотреть"
+          show: "Просмотретьь"
           edit: "Изменить"
           delete: "Удалить"
           cancel: "Отмена"
