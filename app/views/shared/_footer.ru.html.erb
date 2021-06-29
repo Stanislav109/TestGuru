@@ -1,4 +1,9 @@
 <small>
+  <% if current_user %>
+    <p>
+      <%= link_to 'Обратная связь', new_feedback_path %>
+    </p>
+  <% end %>
   <%= current_year %>  создатель проекта Станислав Ильченко
   <%= github_url("Stanislav109", "TestGuru") %>.
   Проект TestGuru - это набор тестов, с возможностью их проходить.
