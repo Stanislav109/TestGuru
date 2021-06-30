@@ -9,6 +9,10 @@ en:
         title: "Title"
         level: "Level"
         category_id: "Category"
+    actions:
+      show: "Show" 
+      edit: "Edit"
+      delete: "Delete"   
 
   tests:
     index:

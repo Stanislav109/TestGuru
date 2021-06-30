@@ -9,6 +9,10 @@ ru:
         title: "Название"
         level: "Уровень"
         category_id: "Категория"
+    actions:
+      show: "Просмотреть" 
+      edit: "Редактировать"
+      delete: "Удалить"   
 
   tests:
     index:
@@ -99,5 +103,5 @@ ru:
         level: "Уровень Сложности"
         category: "Категория"
         back_link: "Назад"
-        edit_link: "Редактироватьь"
+        edit_link: "Редактировать"
         new_question_link: "Создать новый вопрос"
