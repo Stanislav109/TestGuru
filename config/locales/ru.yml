@@ -9,6 +9,10 @@ ru:
         title: "Название"
         level: "Уровень"
         category_id: "Категория"
+    actions:
+      show: "Просмотреть" 
+      edit: "Редактировать"
+      delete: "Удалить"   
 
   tests:
     index:
