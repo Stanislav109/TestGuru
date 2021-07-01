@@ -1,7 +1,7 @@
 <nav class="navbar navbar-light bg-light">
   <% if current_user.is_a?(Admin) %>
     <%= link_to t('.adminpanel'), admin_tests_path %>
-    <%= link_to 'All Gists', admin_gists_path, class: "btn btn-sm btn-secondary" %>
+    
   <% end %>
 
   <%= link_to 'TestGuru', root_path, class: 'navbar-brand' %>
