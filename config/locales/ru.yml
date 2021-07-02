@@ -105,3 +105,7 @@ ru:
         back_link: "Назад"
         edit_link: "Редактировать"
         new_question_link: "Создать новый вопрос"
+    questions:
+      new:
+        header: "Создание нового вопроса"
+        back_link: "Назад"

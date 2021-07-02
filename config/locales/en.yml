@@ -101,3 +101,7 @@ en:
         back_link: "Back"
         edit_link: "Edit"
         new_question_link: "Create new question"
+    questions:
+      new:
+        header: "Create new question"
+        back_link: "Back"
