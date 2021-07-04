@@ -1,5 +1,5 @@
 <tr>
-  <td><%= link_to "#{gist.question.body.truncate(25)}", admin_question_path(gist.question) %></td>
-  <td><%= link_to("#{Digest::SHA1.hexdigest(gist.gist_url) }", gist.gist_url, target: "_blank") %></td>
+  <td><%= link_to gist.question.body,  admin_question_path(gist.question)%></td>
+  <td><%= link_to gist.gist_id,  gist.url, {target: "_blank", rel: "nofollow"}  %></td>
   <td><%= gist.user.email %></td>
 </tr>
