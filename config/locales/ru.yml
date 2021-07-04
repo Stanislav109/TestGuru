@@ -12,7 +12,12 @@ ru:
     actions:
       show: "Просмотреть" 
       edit: "Редактировать"
-      delete: "Удалить"   
+      delete: "Удалить"  
+      
+  gists:
+    create:
+     success: "Gist успешно сохранен!"
+     failure: "Во время сохранения gist произошла ошибка" 
 
   tests:
     index:
