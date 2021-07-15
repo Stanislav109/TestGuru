@@ -40,10 +40,12 @@ class TestPassage < ApplicationRecord
   end
 
   def set_current_question
-    if new_record?
-      self.current_question = test.questions.first if test.present?
-    else
-      self.current_question = next_question
-    end
+    return unless test.present?
+    self.current_question = 
+      if current_question.nil?
+        test.questions.first
+      else
+        next_question
+      end
   end
 end

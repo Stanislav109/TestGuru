@@ -1,0 +1,25 @@
+<% if @user_badges.present? %>
+  <h1>Ваши бэйджи</h1>
+
+  <table class='table'>
+  	<tr>
+  	  <th>Название</th>	
+  	  <th>Бэйдж</th>
+  	</tr>
+  	<%= render partial: 'user_badges', collection: @user_badges, as: :user_badge %>
+  </table>
+<% else %>
+  <p><% flash[:notice] = t('no_badges')%></p>
+<% end %>
+
+<h1>Все бэйджи</h1>
+
+<table class='table'>
+  <tr>
+  	<th>Название</th>	
+  	<th>Бэйдж</th>
+  </tr>
+  <%= render @badges %>
+</table>
+
+<%= link_to 'Назад', tests_path %>

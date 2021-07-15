@@ -1,4 +1,9 @@
 en:
+  first_try: "Test passed on the first try"
+  all_by_category: "Passed all tests by category"
+  all_by_level: "Passed all tests by level"
+  add_badge: "Congratulations! You have earned a badge"
+  no_badges: "Unfortunately, you don't have any badges yet"
   helpers:
     submit:
       test:

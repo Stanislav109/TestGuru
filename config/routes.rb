@@ -3,6 +3,8 @@ Rails.application.routes.draw do
 
   devise_for :users, path: :gurus, path_names: { sign_in: :login, sign_out: :logout }, controllers: {sessions: 'sessions'}
 
+  resources :badges, only: :index
+
   resources :gists, only: :create
 
   resource :feedback, only: %i[new create]
@@ -23,6 +25,7 @@ Rails.application.routes.draw do
 
   namespace :admin do
     resources :gists
+    resources :badges, shallow: true
     resources :tests do
       patch :update_inline, on: :member
       resources :questions, shallow: true, except: :index do
