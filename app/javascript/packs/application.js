@@ -6,6 +6,7 @@ require("utilities/sorting")
 require("utilities/check_password")
 require("utilities/form_inline")
 require("utilities/progress_bar")
+require("tools/start_timer")
 
 import Rails from "@rails/ujs"
 import Turbolinks from "turbolinks"
