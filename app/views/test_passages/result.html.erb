@@ -1,5 +1,10 @@
 <h1><%= t('.header', title: @test_passage.test.title) %></h1>
 
+<% unless @test_passage.left_time.nil? %>
+  <% flash.now[:alert] = t('times_up') if @test_passage.left_time == 0 %>
+  <% flash.now[:notice] = t('in_time') if @test_passage.left_time > 0 %>
+<% end %>
+
 <% if @test_passage.passed? %>
   <div class="correct">
     <h2> Ура! Вы прошли тест! </h2>

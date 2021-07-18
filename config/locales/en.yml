@@ -1,4 +1,6 @@
 en:
+  times_up: "Time up!"
+  in_time: "In time!"
   first_try: "Test passed on the first try"
   all_by_category: "Passed all tests by category"
   all_by_level: "Passed all tests by level"
